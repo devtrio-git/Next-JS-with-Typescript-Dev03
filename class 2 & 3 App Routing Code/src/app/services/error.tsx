@@ -1,0 +1,11 @@
+'use client';
+const error = ({ error, reset }: { error: Error, reset: () => void }) => {
+    return (
+        <div>
+            <h1>{error.message}</h1>
+            <button onClick={() => reset()}>Page Refresh</button>
+        </div>
+    )
+}
+
+export default error
