@@ -1,4 +1,4 @@
-import { Metadata, ResolvedMetadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import ProductDetail from "./product-detail";
 import { Constants } from "../../../constants";
 import Product from "@/models/product.model";
@@ -16,9 +16,9 @@ async function fetchProduct(product_id: string) {
     return product;
 }
 
-export async function generateMetaData(
+export async function generateMetadata(
     { searchParams }: IRequestSearchParamsProps,
-    parent: ResolvedMetadata
+    parent: ResolvingMetadata
 ): Promise<Metadata> {
     const { id } = await searchParams;
     const product = await fetchProduct(id);
