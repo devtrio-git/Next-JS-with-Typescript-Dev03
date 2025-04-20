@@ -1,0 +1,12 @@
+.product_card {
+    width : 300px;
+    border: 1px solid white;
+
+    figure {
+        img {
+            width     : 300px;
+            height    : 300px;
+            object-fit: contain;
+        }
+    }
+}
